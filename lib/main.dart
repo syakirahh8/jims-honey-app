@@ -1,6 +1,8 @@
 import 'package:flutter/material.dart';
 import 'package:owala/utils/const.dart';
 import 'package:owala/views/auth/login_screen.dart';
+import 'package:owala/views/auth/register_screen.dart';
+import 'package:owala/views/home/catalogue_screen.dart';
 import 'package:owala/views/onboarding/onboarding_screen.dart';
 
 void main() {
@@ -34,6 +36,8 @@ class _OwalaAppState extends State<OwalaApp> {
       routes: {
         '/onboarding': (context) => OnboardingScreen(),
         '/login': (context) => LoginScreen(),
+        '/register' : (context) => RegisterScreen(),
+        '/catalogue' : (context) => CatalogueScreen(),
       },
     );
   }
