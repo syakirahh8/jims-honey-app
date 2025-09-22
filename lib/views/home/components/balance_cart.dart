@@ -53,7 +53,9 @@ class BalanceCart extends StatelessWidget {
             ),
           ),
           Expanded(
+            flex: 3,
             child: Row(
+              mainAxisAlignment: MainAxisAlignment.spaceEvenly,
               children: [
                 _actionButton(Icons.arrow_upward, "Pay"),
                 _actionButton(Icons.add_circle, "Top Up"),
