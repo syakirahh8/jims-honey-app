@@ -1,11 +1,11 @@
 import 'package:flutter/material.dart';
-import 'package:owala/utils/const.dart';
-import 'package:owala/views/home/components/app.bar.dart';
-import 'package:owala/views/home/components/balance_cart.dart';
-import 'package:owala/views/home/components/banner_slider.dart';
-import 'package:owala/views/home/components/bottom_nav_bar.dart';
-import 'package:owala/views/home/components/categories.dart';
-import 'package:owala/views/home/components/drinkware_grid.dart';
+import 'package:jims_honey/utils/const.dart';
+import 'package:jims_honey/views/home/components/app.bar.dart';
+import 'package:jims_honey/views/home/components/balance_cart.dart';
+import 'package:jims_honey/views/home/components/banner_slider.dart';
+import 'package:jims_honey/views/home/components/bottom_nav_bar.dart';
+import 'package:jims_honey/views/home/components/categories.dart';
+import 'package:jims_honey/views/home/components/drinkware_grid.dart';
 
 class CatalogueScreen extends StatefulWidget {
   const CatalogueScreen({super.key});

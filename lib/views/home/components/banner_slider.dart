@@ -1,5 +1,5 @@
 import 'package:flutter/material.dart';
-import 'package:owala/utils/const.dart';
+import 'package:jims_honey/utils/const.dart';
 
 class BannerSlider extends StatelessWidget {
   const BannerSlider({super.key});

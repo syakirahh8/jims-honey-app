@@ -1,29 +1,29 @@
 import 'package:flutter/material.dart';
-import 'package:owala/models/products_model.dart';
-import 'package:owala/utils/const.dart';
-import 'package:owala/views/auth/login_screen.dart';
-import 'package:owala/views/auth/register_screen.dart';
-import 'package:owala/views/detail/detail_screen.dart';
-import 'package:owala/views/home/catalogue_screen.dart';
-import 'package:owala/views/onboarding/onboarding_screen.dart';
+import 'package:jims_honey/utils/const.dart';
+import 'package:jims_honey/models/products_model.dart';
+import 'package:jims_honey/views/auth/login_screen.dart';
+import 'package:jims_honey/views/auth/register_screen.dart';
+import 'package:jims_honey/views/detail/detail_screen.dart';
+import 'package:jims_honey/views/home/catalogue_screen.dart';
+import 'package:jims_honey/views/onboarding/onboarding_screen.dart';
 
 void main() {
-  runApp(OwalaApp());
+  runApp(JimsHoney());
 }
 
-class OwalaApp extends StatefulWidget {
-  const OwalaApp({super.key});
+class JimsHoney extends StatefulWidget {
+  const JimsHoney({super.key});
 
   @override
-  State<OwalaApp> createState() => _OwalaAppState();
+  State<JimsHoney> createState() => _JimsHoneyState();
 }
 
-class _OwalaAppState extends State<OwalaApp> {
+class _JimsHoneyState extends State<JimsHoney> {
   @override
   Widget build(BuildContext context) {
     return MaterialApp(
       debugShowCheckedModeBanner: false,
-      title: "Owala App",
+      title: "Jims Honey App",
       theme: ThemeData(
         fontFamily: 'Plus Jakarta Sans',
         visualDensity: VisualDensity.adaptivePlatformDensity, // untuk mengatur kepadatan di setiap platform
@@ -34,7 +34,7 @@ class _OwalaAppState extends State<OwalaApp> {
         scaffoldBackgroundColor: Colors.white
       ),
       // initialRoute : untuk mendefinisikan kelas apa yang tampil pertama kali saat aplikasi dijalankan
-      initialRoute: '/login',
+      initialRoute: '/onboarding',
       routes: {
         '/onboarding': (context) => OnboardingScreen(),
         '/login': (context) => LoginScreen(),

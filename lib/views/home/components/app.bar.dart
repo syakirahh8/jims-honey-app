@@ -1,5 +1,5 @@
 import 'package:flutter/material.dart';
-import 'package:owala/utils/const.dart';
+import 'package:jims_honey/utils/const.dart';
 
 class CatalogueAppBar extends StatelessWidget implements PreferredSizeWidget{
   const CatalogueAppBar({super.key});

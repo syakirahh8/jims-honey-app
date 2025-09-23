@@ -1,5 +1,5 @@
 import 'package:flutter/material.dart';
-import 'package:owala/models/products_model.dart';
+import 'package:jims_honey/models/products_model.dart';
 
 final List<ProductsModel> products = [
   ProductsModel(

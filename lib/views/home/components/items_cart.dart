@@ -1,6 +1,6 @@
 import 'package:flutter/material.dart';
-import 'package:owala/models/products_model.dart';
-import 'package:owala/utils/const.dart';
+import 'package:jims_honey/models/products_model.dart';
+import 'package:jims_honey/utils/const.dart';
 
 class ItemsCart extends StatelessWidget {
   final ProductsModel product;

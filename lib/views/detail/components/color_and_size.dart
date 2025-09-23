@@ -1,7 +1,7 @@
 import 'package:flutter/material.dart';
-import 'package:owala/models/products_model.dart';
-import 'package:owala/utils/const.dart';
-import 'package:owala/views/detail/components/color_picker.dart';
+import 'package:jims_honey/models/products_model.dart';
+import 'package:jims_honey/utils/const.dart';
+import 'package:jims_honey/views/detail/components/color_picker.dart';
 
 class ColorAndSize extends StatelessWidget {
   final ProductsModel product;
@@ -15,6 +15,7 @@ class ColorAndSize extends StatelessWidget {
       children: [
         Expanded(
           child: Column(
+            crossAxisAlignment: CrossAxisAlignment.start,
             children: [
               Text("Color", style: TextStyle(color: textColor)),
               Row(
