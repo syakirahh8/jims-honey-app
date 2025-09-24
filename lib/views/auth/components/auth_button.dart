@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:jims_honey/utils/const.dart';
 
 class AuthButton extends StatelessWidget {
   final String text;
@@ -7,8 +8,14 @@ class AuthButton extends StatelessWidget {
   final Color backgroundColor;
   final Widget? icon;
 
-
-  const AuthButton({super.key, required this.text, required this.onPressed, required this.textColor, required this.backgroundColor, this.icon});
+  const AuthButton({
+    super.key,
+    required this.text,
+    required this.onPressed,
+    required this.textColor,
+    required this.backgroundColor,
+    this.icon,
+  });
 
   @override
   Widget build(BuildContext context) {
@@ -17,17 +24,24 @@ class AuthButton extends StatelessWidget {
       // ?? adalah simbol dari null-aware operator
       // atau operator yang digunakan untuk menyimpan nilai default untuk suatu kondisi
       icon: icon ?? SizedBox.shrink(),
-      label: Text(text),
+      label: Text(
+        text,
+        style: TextStyle(
+          fontSize: 18,
+          fontWeight: FontWeight.bold,
+          color: Colors.white,
+        ),
+      ),
       style: ElevatedButton.styleFrom(
+        elevation: 2,
+        shadowColor: Colors.black26,
         minimumSize: Size(double.infinity, 50),
         backgroundColor: backgroundColor,
         foregroundColor: textColor,
-        side:  backgroundColor == Colors.white
-            ? BorderSide(color: Colors.grey)
+        side: backgroundColor == Colors.white
+            ? BorderSide(color: textColor)
             : null,
-            shape: RoundedRectangleBorder(
-              borderRadius: BorderRadius.circular(8)
-            )
+        shape: RoundedRectangleBorder(borderRadius: BorderRadius.circular(10)),
       ),
     );
   }

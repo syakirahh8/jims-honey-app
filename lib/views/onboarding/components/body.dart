@@ -1,9 +1,12 @@
 import 'package:flutter/material.dart';
 import 'package:jims_honey/data/onboarding_data.dart';
+// import 'package:jims_honey/data/products_data.dart';
+// import 'package:jims_honey/models/onboarding_model.dart';
 import 'package:jims_honey/utils/const.dart';
 import 'package:jims_honey/views/onboarding/components/boarding_content.dart';
 
 class Body extends StatefulWidget {
+
   const Body({super.key});
 
   @override
@@ -34,6 +37,7 @@ class _BodyState extends State<Body> {
                 },
                 itemCount: onBoardingData.length,
                 itemBuilder: (context, index) => OnboardingContent(
+                  title: onBoardingData[index].title,
                   text: onBoardingData[index].text,
                   image: onBoardingData[index].image,
                 ),
@@ -44,12 +48,12 @@ class _BodyState extends State<Body> {
                 mainAxisAlignment: MainAxisAlignment.center,
                 children: List.generate(
                   onBoardingData.length,
-                  (index) => _dotsIndicator(index: index)
+                  (index) => _dotsIndicator(index: index),                  
                 ),
               ),
             ),
             Padding(
-              padding: EdgeInsetsGeometry.symmetric(horizontal: 15, vertical: 30),
+              padding: EdgeInsets.only(left: 30, right: 30, bottom: 50),
               child: SizedBox(
                 width: double.infinity,
                 child: ElevatedButton(
@@ -69,7 +73,11 @@ class _BodyState extends State<Body> {
                   },
                   child: Text(
                     currentPage == onBoardingData.length - 1 ? "Get Started" : "Next",
-                    style: TextStyle(color: Colors.white),
+                    style: TextStyle(
+                    color: Colors.white,
+                    fontSize: 18,
+                    fontWeight: FontWeight.bold
+                    ),
                   ),
                 ),
               ),
@@ -88,7 +96,7 @@ class _BodyState extends State<Body> {
         color: currentPage == index ? primaryColor : secondaryColor
       ),
       width: currentPage == index ? 20 : 7,
-      height: 5,
+      height: 6,
       duration: animationDuration,
     );
   }

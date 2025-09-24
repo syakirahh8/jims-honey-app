@@ -1,18 +1,19 @@
 import 'package:jims_honey/models/onboarding_model.dart';
 
-final String assetsPath = "assets/images/drinkware/SmoothSip_TelescopeTales.png";
-
 List<OnboardingModel> onBoardingData = [
   OnboardingModel(
-    image: assetsPath,
-    text: "Welcome to Owala – The water bottle \nthat transforms the way you stay hydrated",
+    title: "Discover",
+    image: "assets/images/discover.png",
+    text: "Elevate your style with Jims Honey’s \npremium bags and accessories.",
   ),
   OnboardingModel(
-    image: assetsPath,
-    text: "Stylish & Eco-Friendly Design. \nStay hydrated in style while caring for our planet",
+     title: "Style",
+    image: "assets/images/style.png",
+    text: "From casual to formal, Jims Honey’s \nbrings fashion that fits every occasion.",
   ),
   OnboardingModel(
-    image: assetsPath,
-    text: "Ready to start your hydration journey? \nLet’s explore our products!",
+    title: "Shop",
+    image: "assets/images/shop.png",
+    text: "Seamless shopping with Jims Honey \ndelivering your favorites anytime.",
   ),
 ];
