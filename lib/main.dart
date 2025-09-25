@@ -6,6 +6,7 @@ import 'package:jims_honey/views/auth/register_screen.dart';
 import 'package:jims_honey/views/detail/detail_screen.dart';
 import 'package:jims_honey/views/home/catalogue_screen.dart';
 import 'package:jims_honey/views/onboarding/onboarding_screen.dart';
+import 'package:jims_honey/views/opening/splash_screen.dart';
 
 void main() {
   runApp(JimsHoney());
@@ -34,8 +35,9 @@ class _JimsHoneyState extends State<JimsHoney> {
         scaffoldBackgroundColor: Colors.white
       ),
       // initialRoute : untuk mendefinisikan kelas apa yang tampil pertama kali saat aplikasi dijalankan
-      initialRoute: '/onboarding',
+      initialRoute: '/catalogue',
       routes: {
+        '/splash': (context) => SplashScreen(),
         '/onboarding': (context) => OnboardingScreen(),
         '/login': (context) => LoginScreen(),
         '/register' : (context) => RegisterScreen(),

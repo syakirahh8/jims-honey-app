@@ -26,7 +26,7 @@ class LoginScreen extends StatelessWidget {
             child: Row(
               children: [
                 IconButton(
-                  icon: Icon(Icons.arrow_back, size: 35, color: textColor,),
+                  icon: Icon(Icons.arrow_back, size: 30, color: textColor,),
                   onPressed: () =>
                     Navigator.pushNamed(context, '/onboarding'),
                 ),

@@ -7,12 +7,12 @@ class BannerSlider extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return ConstrainedBox(
-      constraints: BoxConstraints(maxHeight: 180),
+      constraints: BoxConstraints(maxHeight: 200),
       child: PageView(
         children: [
-          _BannerImage(asset: 'assets/images/banner_01.png'),
-          _BannerImage(asset: 'assets/images/banner_02.png'),
-          _BannerImage(asset: 'assets/images/banner_03.png'),
+          _BannerImage(asset: 'assets/images/banner-jh2.jpg'),
+          _BannerImage(asset: 'assets/images/banner-jh1.jpg'),
+          _BannerImage(asset: 'assets/images/banner-jh3.jpg'),
         ],
       ),
     );
@@ -28,7 +28,14 @@ class _BannerImage extends StatelessWidget {
   Widget build(BuildContext context) {
     return Padding(
       padding: EdgeInsets.all(defaultPadding),
-      child: Image.asset(asset, fit: BoxFit.cover),
+      child: ClipRRect(
+        borderRadius: BorderRadius.circular(16), // atur sesuai selera
+        child: Image.asset(
+          asset,
+          fit: BoxFit.cover,
+          width: double.infinity,
+        ),
+      ),
     );
   }
 }

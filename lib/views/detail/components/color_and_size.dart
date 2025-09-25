@@ -20,9 +20,9 @@ class ColorAndSize extends StatelessWidget {
               Text("Color", style: TextStyle(color: textColor)),
               Row(
                 children: [
-                  ColorPicker(color: Color(0xFF90B4C6), isSelected: true),
-                  ColorPicker(color: Color(0xFFFCEABF), isSelected: false),
-                  ColorPicker(color: Color(0xFF989493), isSelected: false),
+                  ColorPicker(color: Color.fromARGB(255, 182, 224, 243), isSelected: true),
+                  ColorPicker(color: Color.fromARGB(255, 216, 171, 213), isSelected: false),
+                  ColorPicker(color: Color.fromARGB(255, 237, 186, 174), isSelected: false),
                 ],
               ),
             ],
@@ -43,12 +43,11 @@ class ColorAndSize extends StatelessWidget {
                   style: TextStyle(color: textColor),
                   children: [
                     TextSpan(
-                      text: "${product.size} oz",
+                      text: "${product.size} cm",
                       style: Theme.of(context)
                       .textTheme
                       .titleLarge!
                       .copyWith(fontWeight: FontWeight.bold)
-
                     )
                   ]
                 ),

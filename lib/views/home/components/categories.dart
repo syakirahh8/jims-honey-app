@@ -8,23 +8,13 @@ class Categories extends StatefulWidget {
   State<Categories> createState() => _CategoriesState();
 }
 
-List<Map<String, dynamic>> categories = [
-  {
-    "icon": Icons.local_drink, 
-    "text": "Drinkware"
-  },
-  {
-    "icon": Icons.color_lens, 
-    "text": "Color Drop"
-  },
-  {
-    "icon": Icons.card_giftcard, 
-    "text": "Bundles"
-  },
-  {
-    "icon": Icons.accessibility, 
-    "text": "Accesories"
-  },
+// kamu boleh tetap simpan icon di data, tapi di UI ini kita pakai teks saja
+final List<Map<String, dynamic>> categories = [
+  {"text": "All"},
+  {"text": "Newest"},
+  {"text": "Popular"},
+  {"text": "Clothes"},
+  {"text": "Bags"},
 ];
 
 int selectedIndex = 0;
@@ -40,9 +30,9 @@ class _CategoriesState extends State<Categories> {
           Row(
             children: [
               Text(
-                "Categories",
+                "Flash Sale",
                 style: TextStyle(
-                  fontSize: 18,
+                  fontSize: 20,
                   fontWeight: FontWeight.bold,
                   color: textColor,
                 ),
@@ -50,65 +40,64 @@ class _CategoriesState extends State<Categories> {
               Spacer(),
               GestureDetector(
                 onTap: () {},
-                child: Text(
-                  "View All",
-                  style: TextStyle(
-                    color: Color(0xFF236A91),
-                    fontSize: 16,
-                    fontWeight: FontWeight.bold,
-                  ),
+                child: Icon(
+                  Icons.arrow_forward_ios,
+                  color:textColor,
+                  size: 18,
                 ),
               ),
             ],
           ),
-          SizedBox(height: defaultPadding),
+           SizedBox(height: defaultPadding),
           SizedBox(
-            height: 65,
+            height: 40, // tinggi chip bar
             child: ListView.builder(
               scrollDirection: Axis.horizontal,
-              itemCount: categories.length, //ngambil smua data yang ada
+              physics: BouncingScrollPhysics(),
+              itemCount: categories.length,
               itemBuilder: (context, index) => _buildCategory(index),
             ),
-          )
+          ),
         ],
       ),
     );
   }
 
-  GestureDetector _buildCategory(int index) {
-    return GestureDetector(
-      onTap: () {
-        setState(() {
-          selectedIndex = index;
-        });
-      },
-      child: Padding(
-        padding: EdgeInsets.symmetric(horizontal: defaultPadding),
-        child: Column(
-          mainAxisAlignment: MainAxisAlignment.center,
-          children: [
-            Container(
-              padding: EdgeInsets.all(10), // kurangi padding agar lebih kecil
-              decoration: BoxDecoration(
-                color: selectedIndex == index ? primaryColor.withValues(alpha: 0.2) : Colors.grey.withValues(alpha: 0.0),
-                shape: BoxShape.circle
-              ),
-              child: Icon(
-                categories[index]["icon"],
-                color: selectedIndex == index ? primaryColor : secondaryColor,
-                size: 20,
-              ),
+  Widget _buildCategory(int index) {
+    final bool isSelected = selectedIndex == index;
+
+    return Padding(
+      padding: EdgeInsets.only(right: 8),
+      child: GestureDetector(
+        onTap: () => setState(() => selectedIndex = index),
+        child: AnimatedContainer(
+          duration: Duration(milliseconds: 200),
+          padding: EdgeInsets.symmetric(horizontal: 14, vertical: 8),
+          decoration: BoxDecoration(
+            color: isSelected ? primaryColor : Colors.white,
+            borderRadius: BorderRadius.circular(20),
+            border: Border.all(
+              color: isSelected ? Colors.transparent : Color.fromARGB(255, 150, 148, 148),
+              width: 1.2,
             ),
-            SizedBox(height: 7),
-            Text(
-              categories[index]["text"],
-              style: TextStyle(
-                color: selectedIndex == index ? primaryColor : secondaryColor,
-                fontWeight: selectedIndex == index ? FontWeight.bold : FontWeight.normal,
-                fontSize: 12
-              ),
-            )
-          ],
+            boxShadow: isSelected
+                ? [
+                    BoxShadow(
+                      color: Colors.black12,
+                      blurRadius: 8,
+                      offset: Offset(0, 3),
+                    ),
+                  ]
+                : null,
+          ),
+          child: Text(
+            categories[index]["text"],
+            style: TextStyle(
+              fontSize: 14,
+              fontWeight: FontWeight.w600,
+              color: isSelected ? Colors.white : Color.fromARGB(255, 169, 163, 163),
+            ),
+          ),
         ),
       ),
     );

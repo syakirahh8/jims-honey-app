@@ -30,7 +30,7 @@ class RegisterScreen extends StatelessWidget {
             child: Row(
               children: [
                 IconButton(
-                  icon: Icon(Icons.arrow_back, size: 35, color: textColor),
+                  icon: Icon(Icons.arrow_back, size: 30, color: textColor),
                   onPressed: () => Navigator.pushNamed(context, '/login'),
                 ),
                SizedBox(width: 75),
@@ -239,7 +239,6 @@ class RegisterScreen extends StatelessWidget {
                               ),
                             ],
                           ),
-                          SizedBox(height: 20)
                         ],
                       ),
                     ),

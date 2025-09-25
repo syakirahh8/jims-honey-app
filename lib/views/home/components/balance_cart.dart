@@ -10,7 +10,7 @@ class BalanceCart extends StatelessWidget {
       margin: EdgeInsets.all(defaultPadding),
       padding: EdgeInsets.all(15),
       decoration: BoxDecoration(
-        color: Color(0xFF236A91),
+        color: secondaryColor,
         borderRadius: BorderRadius.circular(12)
       ),
       child: Row(
@@ -28,10 +28,10 @@ class BalanceCart extends StatelessWidget {
                 children: [
                   Row(
                     children: [
-                      Icon(Icons.account_balance_wallet, color: Color(0xFF236A91)),
+                      Icon(Icons.account_balance_wallet, color: textColor),
                       SizedBox(width: 8),
                       Text(
-                        "Bottles",
+                        "Money",
                       style: TextStyle(
                         fontWeight: FontWeight.bold,
                         color: Colors.black
@@ -41,7 +41,7 @@ class BalanceCart extends StatelessWidget {
                   ),
                   SizedBox(height: 8),
                   Text(
-                    "Rp 800.000",
+                    "Rp 600.000",
                     style: TextStyle(
                       fontSize: 20,
                       fontWeight: FontWeight.bold,
@@ -71,12 +71,12 @@ class BalanceCart extends StatelessWidget {
   Widget _actionButton(IconData icon, String label) {
     return Column(
       children: [
-        Icon(icon, color: Colors.white),
+        Icon(icon, color: textColor),
         SizedBox(height: 4),
         Text(
           label,
           style: TextStyle(
-            color: Colors.white
+            color: textColor
           ),
         )
       ],

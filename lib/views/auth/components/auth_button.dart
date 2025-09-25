@@ -1,5 +1,4 @@
 import 'package:flutter/material.dart';
-import 'package:jims_honey/utils/const.dart';
 
 class AuthButton extends StatelessWidget {
   final String text;

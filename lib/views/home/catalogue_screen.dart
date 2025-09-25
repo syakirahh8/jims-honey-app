@@ -1,5 +1,4 @@
 import 'package:flutter/material.dart';
-import 'package:jims_honey/utils/const.dart';
 import 'package:jims_honey/views/home/components/app.bar.dart';
 import 'package:jims_honey/views/home/components/balance_cart.dart';
 import 'package:jims_honey/views/home/components/banner_slider.dart';
@@ -41,17 +40,17 @@ class _CatalogueScreenState extends State<CatalogueScreen> {
               SizedBox(height: 15),
               Categories(),
               SizedBox(height: 15),
-              Padding(
-                padding: EdgeInsets.all(defaultPadding),
-                child: Text(
-                  "Drinkware",
-                  style: TextStyle(
-                    fontSize: 18,
-                    fontWeight: FontWeight.bold,
-                    color: textColor
-                  ),
-                ),
-              ),
+              // Padding(
+              //   padding: EdgeInsets.all(defaultPadding),
+              //   child: Text(
+              //     "Drinkware",
+              //     style: TextStyle(
+              //       fontSize: 18,
+              //       fontWeight: FontWeight.bold,
+              //       color: textColor
+              //     ),
+              //   ),
+              // ),
               DrinkwareGrid(),
 
             ],
