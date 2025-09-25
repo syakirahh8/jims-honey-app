@@ -35,7 +35,7 @@ class _JimsHoneyState extends State<JimsHoney> {
         scaffoldBackgroundColor: Colors.white
       ),
       // initialRoute : untuk mendefinisikan kelas apa yang tampil pertama kali saat aplikasi dijalankan
-      initialRoute: '/catalogue',
+      initialRoute: '/splash',
       routes: {
         '/splash': (context) => SplashScreen(),
         '/onboarding': (context) => OnboardingScreen(),
